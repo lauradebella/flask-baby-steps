@@ -5,4 +5,4 @@ blueprint = Blueprint('home_controller', __name__, url_prefix='/')
 
 @flask.route("/")
 def hello():
-    return "Hello World!"
+    return "Hello World 1!"
