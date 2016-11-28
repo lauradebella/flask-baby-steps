@@ -1,17 +1,8 @@
-from flask import jsonify
 from app import flask
-from app.models.post import Post
+from app.controllers.home_controller import blueprint as home
+from app.controllers.post_controller import blueprint as post
 
-
-@flask.route("/")
-def hello():
-    return "Hello World!"
-
-
-@flask.route("/posts")
-def Posts():
-    posts = [dict(d) for d in Post.query.all()]
-    return jsonify(posts=posts), 200
-
+flask.register_blueprint(home)
+flask.register_blueprint(post)
 
 flask.run()
