@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask.ext.runner import Manager
 
 flask = Flask(__name__)
-flask.config.from_object('config')
+flask.config.from_object('config.Development')
 
 db = SQLAlchemy(flask)
 manager = Manager(flask)
