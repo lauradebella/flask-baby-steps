@@ -9,7 +9,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config["SQLALCHEMY_DATABASE_URI"] = "mssql+pyodbc://sa:131313@localhost:1433/Flask?driver=SQL+Server+Native+Client+11.0"
 
 db = SQLAlchemy(app)
-
 #models
 class Post(db.Model):
     id = Column(Integer, primary_key=True)
