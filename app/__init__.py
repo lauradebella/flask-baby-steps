@@ -3,10 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask.ext.runner import Manager
 
 flask = Flask(__name__)
-
-flask.config['DEBUG'] = True
-flask.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
-flask.config["SQLALCHEMY_DATABASE_URI"] = "mssql+pyodbc://sa:131313@localhost:1433/Flask?driver=SQL+Server+Native+Client+11.0"
+flask.config.from_object('config')
 
 db = SQLAlchemy(flask)
 manager = Manager(flask)
