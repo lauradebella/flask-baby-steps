@@ -1,6 +1,5 @@
 from flask import jsonify, Blueprint
-from app import flask
-from app.models.post import Post
+from app.models import Post
 
 blueprint = Blueprint('post_controller', __name__, url_prefix='/posts')
 
